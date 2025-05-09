@@ -5,7 +5,7 @@ from datetime import datetime
 def add_goal():
     goal = Your_goal.get()
     dead_line = Deadline.get()
-    
+
     if not goal or not dead_line:
         box.insert(tk.END,"Please add your goal and deadline:")
         return
@@ -31,16 +31,16 @@ app.geometry("450x450")
 app.configure(bg="#FAF0E6")
 
 #title
-title = tk.Label(app,text="Life Planner : Planning your priority",font=("Fira Code",15,"bold"),bg="#FAF0E6",fg="#444")
-title.pack(pady=15)
+TitleLabel = tk.Label(app,text="Life Planner : Plan Your Priorities",font=("Fira Code",15,"bold"),bg="#FAF0E6",fg="#444")
+TitleLabel.pack(pady=15)
 
 #goal
-goal = tk.Label(app,text="🎯 Your goal :",font=("Fira Code",13,"bold"),bg="#FAF0E6",fg="#444").pack()
+GoalLabel = tk.Label(app,text="🎯 Your goal :",font=("Fira Code",13,"bold"),bg="#FAF0E6",fg="#444").pack()
 Your_goal = tk.Entry(app,width=40,font=("Fira Code",12))
 Your_goal.pack(pady=5,ipady=3)
 
 #deadline
-title = tk.Label(app,text="⏳🔚🏁 Deadline (yyyy/mm/dd):",font=("Fira Code",13,"bold"),bg="#FAF0E6",fg="#444").pack()
+DeadlineLabel = tk.Label(app,text="⏳🔚🏁 Deadline (yyyy/mm/dd):",font=("Fira Code",13,"bold"),bg="#FAF0E6",fg="#444").pack()
 Deadline = tk.Entry(app,width=40,font=("Fira Code",12))
 Deadline.pack(pady=5,ipady=3)
 
